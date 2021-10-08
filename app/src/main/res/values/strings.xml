@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">bbxyz</string>
+    <string name="you_are">You are %1$s</string>
+    <string name="generation_baby_boomer">Baby Boomer</string>
+    <string name="generation_x">Generation X</string>
+    <string name="generation_y">Millennial</string>
+    <string name="generation_z">Zoomer</string>
+    <string name="generation_unknown">Unknown Generation</string>
+    <string name="date_of_birth_hint">Date of birth</string>
+    <string name="get_generation">Get Generation</string>
+    <string name="your_generation">Your generation</string>
 </resources>

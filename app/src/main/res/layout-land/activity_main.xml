@@ -9,12 +9,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/action_card"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@id/generation_card"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/generation_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -26,11 +26,10 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/date_ti"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:endIconMode="custom"
-                android:backgroundTint="@color/secondary_text"
                 app:endIconDrawable="@drawable/ic_calendar_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -39,8 +38,7 @@
                     android:inputType="date"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/date_of_birth_hint"
-                    tools:text="05/08/2002"/>
+                    android:hint="@string/date_of_birth_hint" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -55,18 +53,18 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/generation_card"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/action_card"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/action_card"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="32dp"
+        android:layout_margin="32dp"
         app:cardCornerRadius="10dp">
 
         <LinearLayout
             android:padding="16dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -92,10 +90,10 @@
                 android:id="@+id/generation_iv"
                 android:layout_gravity="center"
                 android:backgroundTint="@null"
-                android:layout_width="256dp"
-                android:layout_height="256dp"
-                app:strokeWidth="4dp"
-                android:padding="4dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:strokeWidth="2dp"
+                android:padding="2dp"
                 app:strokeColor="@color/accent"
                 app:shapeAppearance="@style/ShapeAppearanceOverlay.App.Foobar"
                 tools:srcCompat="@drawable/zoomer"/>
